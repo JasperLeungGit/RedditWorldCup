@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-left: 10px;
 }
 
 .App-logo {
@@ -35,4 +36,128 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+div.transbox {
+  position: absolute;
+  z-index: 300;
+  background-color: black;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  margin-top: -20%;
+  display: none;
+}
+
+html {
+  height: 100vh;
+}
+body {
+  height: 100vh;
+  background-image: url(images/blame.png);
+}
+
+.mainheader {
+  text-align: center;
+  margin-top: 6em;
+  margin-bottom: 2%;
+  color: white;
+  position: relative;
+}
+
+.generating {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 2%;
+  color: white;
+  position: relative;
+  display: none;
+}
+
+.secondheader {
+  text-align: center;
+  color: white;
+  margin-left: 35%;
+  float: left;
+  font-size: 30px;
+  position: relative;
+}
+
+.subsearch {
+  /* margin-top: -2.6%; */
+  margin-top: 0.4%;
+  padding-left: 5px;
+  border-radius: 5px;
+  margin-left: 10px;
+  float: left;
+  position: relative;
+}
+
+.postCaption {
+  color: white;
+  position: absolute;
+}
+
+.imageCaption {
+  position: absolute;
+  top: 80%;
+  text-align: center;
+  width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-left: 25%;
+  transform: translate(-50%, 0);
+  font-size: 2vw;
+  color: white;
+  font-weight: bold;
+}
+
+.imageCaption2 {
+  position: absolute;
+  top: 80%;
+  text-align: center;
+  width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-left: 75%;
+  transform: translate(-50%, 0);
+  font-size: 2vw;
+  color: white;
+  font-weight: bold;
+}
+
+.imageCaptionWinner {
+  position: absolute;
+  top: 75%;
+  text-align: center;
+  width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 2vw;
+  color: white;
+  font-weight: bold;
+}
+
+.fadeOut {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+.fadeIn {
+  opacity: 1;
+  width: 0px;
+  height: 0px;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
 }
