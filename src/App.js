@@ -246,6 +246,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar></NavBar>
+        <h1 className="credits"> Created by Jasper Leung </h1>
         <div id="input">
           <div className="transbox" id="bgdim"></div>
           <h1 className="mainheader">
