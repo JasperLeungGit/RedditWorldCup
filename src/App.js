@@ -46,6 +46,8 @@ class App extends Component {
     } catch (err) {
       document.getElementById("generating").style.display = "none";
       document.getElementById("notEnough").style.display = "block";
+      responses = [];
+      imgPosts = [];
     }
   };
 
@@ -105,7 +107,7 @@ class App extends Component {
     nextBracket.push(this.state.imagePosts[i]);
     if (
       this.state.secondIndex === this.state.imagePosts.length - 1 &&
-      this.state.imagePosts.length != 2
+      this.state.imagePosts.length !== 2
     ) {
       var firstIndex = 0;
       var secondIndex = 1;
@@ -155,8 +157,10 @@ class App extends Component {
                 this.handleChoice(i);
                 var visible1 = true;
                 var visible2 = true;
-                this.setState({ visible1 });
-                this.setState({ visible2 });
+                setTimeout(() => {
+                  this.setState({ visible1 });
+                  this.setState({ visible2 });
+                }, 500);
               }, 1000);
             }}
           />
@@ -168,7 +172,7 @@ class App extends Component {
   };
 
   displaySecondImage = (i) => {
-    if (this.state.imagePosts.length != 0) {
+    if (this.state.imagePosts.length !== 0) {
       return (
         <div className={this.state.visible2 ? "fadeIn" : "fadeOut"}>
           <h1 className="imageCaption2">{this.state.imagePosts[i].title}</h1>
@@ -192,8 +196,10 @@ class App extends Component {
                 this.handleChoice(i);
                 var visible1 = true;
                 var visible2 = true;
-                this.setState({ visible1 });
-                this.setState({ visible2 });
+                setTimeout(() => {
+                  this.setState({ visible1 });
+                  this.setState({ visible2 });
+                }, 500);
               }, 1000);
             }}
           />
@@ -207,7 +213,7 @@ class App extends Component {
   displayWinningImage = (i) => {
     if (this.state.winnerFound === true) {
       return (
-        <div>
+        <div className="fadeIn">
           <h1 className="imageCaptionWinner">
             Winner: {this.state.imagePosts[i].title}
           </h1>

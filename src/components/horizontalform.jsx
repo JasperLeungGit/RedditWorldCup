@@ -10,6 +10,7 @@ class HorizontalForm extends Component {
     const arraySize = e.target.value;
     console.log(arraySize);
     this.setState({ arraySize });
+    document.getElementById("generate").disabled = false;
   };
 
   render() {
@@ -111,11 +112,12 @@ class HorizontalForm extends Component {
         <div className="form-group row">
           <div className="col-sm-10">
             <button
+              id="generate"
               type="button"
               className="btn btn-primary"
               onClick={() => {
                 var size = parseInt(this.state.arraySize, 10);
-                this.props.displayBracket(size);
+                if (size !== 0) this.props.displayBracket(size);
               }}
             >
               Generate Bracket
