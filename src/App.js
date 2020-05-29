@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/navbar";
 import HorizontalForm from "./components/horizontalform";
-import vs from "./images/vs-symbol.png";
 
 const postsPerRequest = 100;
 const maxPostsToFetch = 500;
